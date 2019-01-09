@@ -37,10 +37,10 @@ change_dir() {
 get() {
 	check_version
 	# Download the base kernel
-	wget -Nc "https://www.kernel.org/pub/linux/kernel/v${BASEBASEVER}.x/linux-$BASEVER.tar.xz"
+	wget -Nc "https://cdn.kernel.org/pub/linux/kernel/v${BASEBASEVER}.x/linux-$BASEVER.tar.xz"
 	# Download patch
 	if [ ! "$VERSION" = "$BASEVER" ]; then
-		wget -Nc "https://www.kernel.org/pub/linux/kernel/v${BASEBASEVER}.x/patch-$VERSION.xz"
+		wget -Nc "https://cdn.kernel.org/pub/linux/kernel/v${BASEBASEVER}.x/patch-$VERSION.xz"
 	fi
 }
 
